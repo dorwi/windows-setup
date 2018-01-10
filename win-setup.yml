@@ -1,0 +1,15 @@
+---
+  - hosts: windows
+    tasks:
+      - name: Set the Central Europe Time zone
+        win_timezone:
+          timezone: Central Europe Standard Time
+
+      - name: Create Guest user
+        win_user:
+          name: media
+          password: "{{ guest_password }}"
+          state: present
+          password_never_expires: yes
+          groups:
+            - Users

@@ -1,0 +1,22 @@
+---
+  - hosts: windows
+    tasks:
+      - name: Install VLC
+        win_chocolatey:
+          name: vlc
+          state: latest
+
+      - name: Install spotify
+        win_chocolatey:
+          name: spotify
+          state: latest
+
+      - name: Install Dropbox
+        win_chocolatey:
+          name: dropbox
+          state: latest
+
+      - name: Install keepasxc
+        win_chocolatey:
+          name: keepassxc
+          state: latest

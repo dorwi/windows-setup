@@ -1,0 +1,8 @@
+---
+# run with ansible-playbook -i "localhost," -c local ub-devel.yml
+  - hosts: localhost
+    tasks:
+      - name: Setup git
+        apt:
+          name: git
+          state: latest

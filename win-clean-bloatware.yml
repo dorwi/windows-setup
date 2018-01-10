@@ -1,0 +1,9 @@
+---
+  - hosts: windows
+    tasks:
+      - name: Uninstall spotify appx
+        win_shell: Get-AppxPackage -name "*spotify*" | Remove-AppxPackage
+        register: appxinfo
+
+      - debug:
+          var: appxinfo

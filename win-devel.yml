@@ -1,0 +1,10 @@
+---
+  - hosts: windows
+    tasks:
+      - name: Install VSCode
+        win_chocolatey:
+          name: visualstudiocode
+          state: latest
+
+
+
