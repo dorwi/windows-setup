@@ -1,0 +1,9 @@
+---
+  - hosts: localhost
+    connection: local
+    tasks:
+      - name: Setup hugo
+        apt:
+          name: hugo
+          state: latest
+

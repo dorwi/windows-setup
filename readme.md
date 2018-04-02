@@ -6,6 +6,7 @@ https://www.makeuseof.com/tag/easily-remove-bloatware-windows-10/
 
 # Using the linux subsystem for windows
 https://www.jeffgeerling.com/blog/2017/using-ansible-through-windows-10s-subsystem-linux
+https://www.infoworld.com/article/3204592/linux/get-started-with-the-windows-subsystem-for-linux.html
 
 # Cheat sheet
 

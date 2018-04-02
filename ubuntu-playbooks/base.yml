@@ -1,5 +1,4 @@
 ---
-# run with ansible-playbook -i "localhost," -c local ub-devel.yml
   - hosts: localhost
     connection: local
     tasks:
