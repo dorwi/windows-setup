@@ -1,0 +1,11 @@
+---
+# defaults file for ansible-hugo
+
+hugo_version: "0.38.1"
+hugo_os: "Linux-64bit"
+hugo_format: "deb"
+hugo_download_url: "https://github.com/gohugoio/hugo/releases/download"
+hugo_url: "{{hugo_download_url}}/v{{hugo_version}}/hugo_{{hugo_version}}_{{hugo_os}}.{{hugo_format}}"
+
+
+hugo_temp_dir: "/tmp"

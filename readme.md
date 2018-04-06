@@ -10,6 +10,12 @@ https://www.infoworld.com/article/3204592/linux/get-started-with-the-windows-sub
 
 # Cheat sheet
 
+```bash
+# install galaxy roles
+ansible-galaxy install --roles-path roles_galaxy weldpua2008.hugo
+```
+
+
 ### To run the `ub-devel.yml` playbook, use
 ```bash
 ansible-playbook -i ,localhost ub-devel.yml
