@@ -6,4 +6,3 @@
         apt:
           name: git
           state: latest
-

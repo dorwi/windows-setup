@@ -1,0 +1,22 @@
+---
+- name: Add Azure Cli repo
+  apt_repository:
+    repo: deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ xenial main
+    state: present
+    filename: azure-cli
+
+- name: Get the Microsoft signing key
+  apt_key:
+    keyserver: packages.microsoft.com
+    id: 52E16F86FEE04B979B07E28DB02C46DF417A0893
+
+- name: Add the new key as of May 2018
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+
+# WARNING: The following packages cannot be authenticated!
+#- name: Install Azure Cli tool
+#  apt: 
+#    name: azure-cli
+#    state: installed  
