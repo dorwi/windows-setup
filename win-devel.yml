@@ -6,5 +6,8 @@
           name: visualstudiocode
           state: latest
 
-
+      - name: Install Intellij
+        win_chocolatey:
+          name: intellijidea-community
+          state: latest
 
