@@ -3,7 +3,7 @@
     tasks:
       - name: Install VSCode
         win_chocolatey:
-          name: visualstudiocode
+          name: vscode
           state: latest
 
       - name: Install Intellij
