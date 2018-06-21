@@ -1,0 +1,12 @@
+---
+  - hosts: windows
+    tasks:
+      - name: Install keepasxc
+        win_chocolatey:
+          name: keepassxc
+          state: latest
+
+      - name: Firefox
+        win_chocolatey:
+          name: firefox
+          state: latest
