@@ -6,8 +6,17 @@
           name: vscode
           state: latest
 
-      - name: Install Intellij
+      - name: Install jdk8
         win_chocolatey:
-          name: intellijidea-community
+          name: jdk8
           state: latest
 
+      - name: Commander emulator
+        win_chocolatey:
+          name: cmdermini
+          state: latest
+      
+      - name: Intellij idea
+        win_chocolatey:
+          name: intellijidea-community 
+          state: latest

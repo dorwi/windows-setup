@@ -1,7 +1,8 @@
 ---
   - hosts: windows
     tasks:
-      - name: Install keepasxc
+      - name: Install Android studio
         win_chocolatey:
-          name: keepassxc
+          name: androidstudio
           state: latest
+

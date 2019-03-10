@@ -6,3 +6,23 @@
         apt:
           name: git
           state: latest
+
+      - name: Setup vim
+        apt:
+          name: vim
+          state: latest
+
+    roles:
+      - role: angstwad.docker_ubuntu
+        uninstall_previous_docker_versions: true
+        start_docker_daemon: no
+        tags:
+          - docker
+
+    post_tasks:
+      - name: Add to bashrc, the docker daemon IP connection
+        lineinfile:
+          path: ~/.bashrc
+          line: 'export DOCKER_HOST=tcp://192.168.0.144:2375'
+        tags:
+          - docker
