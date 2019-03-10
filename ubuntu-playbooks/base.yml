@@ -19,6 +19,11 @@
         tags:
           - docker
 
+      - role: uchida.miniconda
+        miniconda_version: latest
+        tags:
+          - conda
+
     post_tasks:
       - name: Add to bashrc, the docker daemon IP connection
         lineinfile:
