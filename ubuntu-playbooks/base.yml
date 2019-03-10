@@ -1,6 +1,8 @@
 ---
   - hosts: localhost
     connection: local
+    vars:
+      - miniconda_prefix: "/opt/miniconda3"
     tasks:
       - name: Setup git
         apt:
@@ -31,3 +33,13 @@
           line: 'export DOCKER_HOST=tcp://192.168.0.144:2375'
         tags:
           - docker
+
+      - name: add {{ miniconda_prefix }} to a global path
+        lineinfile: >
+          dest=/etc/environment
+          state=present
+          backrefs=yes
+          regexp='PATH=(["]*)((?!.*?{{miniconda_prefix}}/bin).*?)(["]*)$'
+          line="PATH=\1\2:{{miniconda_prefix}}/bin\3"
+        tags:
+          - conda
