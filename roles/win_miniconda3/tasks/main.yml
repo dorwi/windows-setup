@@ -1,0 +1,35 @@
+# NOTE: currently the path is added systemwide, which is not recognized
+# in the user environment variable
+---
+- name: Install miniconda3
+  win_chocolatey:
+    name: miniconda3
+    package_params: '/AddToPath:1'
+    state: present
+
+- win_copy:
+   src: files/add-path.ps1
+   dest: 'C:\tmp\'
+
+- name: Setup path in registry
+  win_shell: .\add-path.ps1 -NewPath C:\tools\miniconda3
+  args: 
+    chdir: 'C:\tmp\'
+
+- name: Setup path in registry
+  win_shell: .\add-path.ps1 -NewPath C:\tools\miniconda3\Scripts
+  args: 
+    chdir: 'C:\tmp\'
+
+- name: Setup path in registry
+  win_shell: .\add-path.ps1 -NewPath C:\tools\miniconda3\Library
+  args: 
+    chdir: 'C:\tmp\'
+
+- name: Setup path in registry
+  win_shell: .\add-path.ps1 -NewPath C:\tools\miniconda3\Library\bin
+  args: 
+    chdir: 'C:\tmp\'
+
+- name: Setup path in registry
+  debug: msg="{{ output }}"
