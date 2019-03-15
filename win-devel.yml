@@ -21,6 +21,21 @@
           name: intellijidea-community 
           state: latest
 
+      - name: Install virtual box
+        win_chocolatey:
+          name: virtualbox
+          version: 6.0.4
+        tags:
+          - vagrant
+          - virtualbox
+
+      - name: Vagrant
+        win_chocolatey:
+          name: vagrant
+          version: 2.2.4
+        tags:
+          - vagrant
+
     roles:
       - role: win_miniconda3
         tags:
