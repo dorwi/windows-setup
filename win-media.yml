@@ -25,6 +25,14 @@
         win_chocolatey:
           name: steam
           state: latest
+      
+      - name: Install gimp
+        win_chocolatey:
+          name: gimp
+          state: present
+          version: 2.10.8
+        tags:
+          - gimp
 
 
 # Install handbrake for video converting
