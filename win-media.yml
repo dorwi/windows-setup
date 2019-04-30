@@ -25,7 +25,15 @@
         win_chocolatey:
           name: steam
           state: latest
-      
+
+      - name: Install shotcut
+        win_chocolatey:
+          name: shotcut
+          state: latest
+        tags:
+          - video
+          - shotcut
+
       - name: Install gimp
         win_chocolatey:
           name: gimp
@@ -35,4 +43,5 @@
           - gimp
 
 
-# Install handbrake for video converting
+
+# Install HANDBRAKE for video converting
