@@ -1,4 +1,5 @@
 ---
 # run with ansible-playbook -i "localhost,"  ub-devel.yml
+- import_playbook: ubuntu-playbooks/system.yml
 - import_playbook: ubuntu-playbooks/base.yml
 - import_playbook: ubuntu-playbooks/hugo.yml

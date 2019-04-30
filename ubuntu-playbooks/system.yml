@@ -1,0 +1,15 @@
+---
+  - hosts: localhost
+    connection: local
+    tasks:
+      - name: Add the user 'dorwi' with a bash shell
+        user:
+          name: dorwi
+          shell: /bin/bash
+          groups: admin
+          generate_ssh_key: yes
+          ssh_key_bits: 2048
+          ssh_key_file: .ssh/id_rsa
+          append: yes
+          uid: 1001
+          expires: -1
